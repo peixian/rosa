@@ -1,0 +1,243 @@
+/* Body resets
+   -------------------------------------------------- */
+
+body {
+    padding: 20px;
+    font-family: Menlo, Monaco, monospace;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+}
+p {
+    margin: 0 0 20px;
+}
+i, em, b, strong {
+    padding-left: .1em;
+    padding-right: .1em;
+}
+b, strong {
+    font-weight: bold;
+    color: #333;
+}
+i:before, i:after, em:before, em:after {
+    content: "/";
+}
+ul, ol {
+    padding: 0;
+}
+
+code, pre {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+code {
+    color: #d14;
+}
+pre {
+    display: block;
+    margin: 0 0 14px;
+    padding: 15px;
+    border-radius: 3px 3px 3px 3px;
+    line-height: 28px;
+    background-color: #f5f5f5;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+blockquote {
+    padding: 0 0 0 20px;
+    margin: 0 30px 20px -22.5px;
+    color: #999;
+    border-left: 8px solid #e5e5e5;
+}
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+img {
+    display: block;
+    margin: 0;
+    border-radius: 5px;
+}
+a {
+    font-weight: inherit;
+    line-height: inherit;
+    text-decoration: none;
+}
+
+sup a:before {
+    content: "[";
+}
+sup a:after {
+    content: "]";
+}
+a:hover {
+    text-decoration: underline;
+}
+table {
+    line-height: 2.5;
+    margin-bottom: 15px;
+    max-width: 100%;
+    width: 100%;
+}
+table td, table th {
+    padding: 0 15px;
+}
+table th.left, table td.left {
+    text-align: left;
+}
+table th.right, table td.right {
+    text-align: right;
+}
+/******************************************************/
+/* body */
+body {
+    color: #111;
+    word-wrap: break-word; /* for long words & urls */
+    position: relative;
+    width: 770px;
+    margin: 7em auto;
+    padding: 0 74px 0 222px;
+}
+
+
+.sidebar {
+    width:160px;
+    position:absolute;
+    left:0;
+    text-align:right;
+}
+
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar h1:before {
+    content: "";
+}
+
+.light {color: #8a8a8a}
+
+.entry + .light {margin: 1.7em 0}
+
+h1 + .light {margin-top: -1em}
+h1 + .light:empty {display: none;}
+
+.sidebar h1 {
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.sidebar h1, .sidebar a{
+    font-size: 12px;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 1.7325px;
+}
+
+.sidebar a {display: block;}
+
+.sidebar ul a {
+    color: #8a8a8a;
+}
+
+
+/* post */
+
+
+.post {
+    position: relative;
+    font-family: 'PT Serif', Georgia, serif;
+}
+
+.post h1, .post h2, .post h3 {
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.post img {
+    max-width: 100%;
+}
+.post li {
+    list-style: none outside none;
+}
+.post ul > li:before {
+    content: "- ";
+    color: #ccc;
+}
+.post ol {
+    counter-reset: o-list;
+}
+.post ol > li:before {
+    content: counter(o-list) ") ";
+    counter-increment: o-list;
+    color: #ccc;
+}
+
+.post .section-number-2:after {
+    content: ".";
+}
+
+.post a {
+    color: #3873AD;
+}
+
+/* index */
+
+.index a {
+    color: #000;
+}
+
+/* special for li in pre */
+.post pre li {
+    list-style-type: decimal;
+}
+
+.post pre li:before {
+    display: none;
+}
+
+
+/* table of content */
+#table-of-contents {
+    display: none;
+}
+
+/* katex */
+.katex-html {
+}
+
+.post-meta {
+    font-size: 12px;
+}
+.post-meta a {
+    font-size: 12px;
+}
+/* Responsive
+   -------------------------------------------------- */
+
+@media screen and (max-width: 933px) {
+
+    body {padding: 0 2em;margin: 2em auto;width: auto;}
+
+    .sidebar {position: relative;width: 100%;text-align: center;margin: 0 0 3em}
+
+    .sidebar a {display: inline-block;}
+
+    .sidebar .logo {margin: 0;display: block;text-align: center;}
+
+    .logo.hasAvatar {word-spacing: 0}
+
+    .margin,
+    .margin.right,
+    .margin.left {
+        width: 30%;
+        position: relative;display: block;top: auto;left: auto;right: auto;bottom: auto;}
+
+    .margin.right {float: right;}
+    .margin.left {text-align: left;float: left;}
+
+    .wide, .wide.left, .wide.right {width: 100%;margin: 0}
+}
