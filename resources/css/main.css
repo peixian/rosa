@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'charterregular';
+    src: url('webfonts/charter_regular-webfont.eot');
+    src: url('webfonts/charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/charter_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 /* Body resets
    -------------------------------------------------- */
 
@@ -18,9 +29,6 @@ i, em, b, strong {
 b, strong {
     font-weight: bold;
     color: #333;
-}
-i:before, i:after, em:before, em:after {
-    content: "/";
 }
 ul, ol {
     padding: 0;
@@ -147,7 +155,7 @@ h1 + .light:empty {display: none;}
 
 .post {
     position: relative;
-    font-family: 'PT Serif', Georgia, serif;
+    font-family: 'charterregular', Georgia, serif;
 }
 
 .post h1, .post h2, .post h3 {
