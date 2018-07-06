@@ -173,7 +173,6 @@ h1 + .light:empty {display: none;}
 }
 .post ul > li:before {
     content: "- ";
-    color: #ccc;
 }
 .post ol {
     counter-reset: o-list;
@@ -181,7 +180,6 @@ h1 + .light:empty {display: none;}
 .post ol > li:before {
     content: counter(o-list) ") ";
     counter-increment: o-list;
-    color: #ccc;
 }
 
 .post .section-number-2:after {
@@ -222,6 +220,7 @@ h1 + .light:empty {display: none;}
 }
 .post-meta a {
     font-size: 12px;
+    color : #3873AD;
 }
 /* Responsive
    -------------------------------------------------- */
