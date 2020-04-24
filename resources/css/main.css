@@ -197,6 +197,14 @@ h1 + .light:empty {display: none;}
     color: #000;
 }
 
+.index aside {
+    float: right;
+}
+
+.index ul > li::before {
+    content: "";
+}
+
 /* special for li in pre */
 .post pre li {
     list-style-type: decimal;
