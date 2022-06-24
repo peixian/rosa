@@ -184,9 +184,7 @@ h1 + .light:empty {display: none;}
     counter-increment: o-list;
 }
 
-.post .section-number-2:after {
-    content: ".";
-}
+
 
 .post a {
     color: #3873AD;
