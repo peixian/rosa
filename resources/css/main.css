@@ -285,3 +285,39 @@ h1 + .light:empty {display: none;}
     }
 
 }
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #ddd;
+        background-color: #2d2d2d;
+    }
+    b, strong {
+        color: #ccc;
+    }
+    blockquote {
+        color: #777;
+        border-left: 8px solid #444;
+    }
+    .sidebar h1, .sidebar a {
+        color: #ddd;
+    }
+    .sidebar a {
+        color: #777;
+    }
+    .post {
+        color: #ddd;
+    }
+    .post h1, .post h2, .post h3 {
+        color: #ddd;
+    }
+    .post a {
+        color: #59a;
+    }
+    .index a {
+        color: #ddd;
+    }
+    .post-meta a {
+        color: #59a;
+    }
+}
