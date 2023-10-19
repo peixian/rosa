@@ -320,4 +320,21 @@ h1 + .light:empty {display: none;}
     .post-meta a {
         color: #59a;
     }
+    code {
+        color: #ffa07a;
+    }
+    pre {
+        background-color: #1e1e1e;
+        color: #dcdcdc;
+    }
+    blockquote {
+        color: #888;
+        border-left: 8px solid #666;
+    }
+    img {
+        filter: brightness(0.8);
+    }
+    a {
+        color: #a3d1ff;
+    }
 }
