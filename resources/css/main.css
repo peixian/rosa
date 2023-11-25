@@ -17,7 +17,7 @@ body {
     font-family: Menlo, Monaco, monospace;
     line-height: 1.5;
     color: #000;
-    background-color: #fff;
+    background-color: #fffff8;
 }
 p {
     margin: 0 0 20px;
@@ -133,6 +133,7 @@ body {
 h1 + .light {margin-top: -1em}
 h1 + .light:empty {display: none;}
 
+
 .sidebar h1 {
     font-weight: 400;
     margin-bottom: 1em;
@@ -149,6 +150,20 @@ h1 + .light:empty {display: none;}
 
 .sidebar ul a {
     color: #8a8a8a;
+}
+
+#webring_icon {
+    float: right;
+    height: 14px;
+    width: 14px;
+    background: url('https://webring.xxiivv.com/icon.black.svg') no-repeat center center;
+    background-size: contain;
+}
+
+@media (prefers-color-scheme: dark) {
+    #webring_icon {
+        background-image: url('https://webring.xxiivv.com/icon.white.svg');
+    }
 }
 
 
