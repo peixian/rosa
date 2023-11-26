@@ -1,3 +1,3 @@
-* Generic tufte template
+* Rosa
 
-Org-page template
+Org page theme used for http://malloc.dog/
