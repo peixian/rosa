@@ -55,7 +55,7 @@ pre {
 }
 blockquote {
     padding: 0 0 0 20px;
-    margin: 0 30px 20px -22.5px;
+    margin: 0 30px 20px 0;
     color: #999;
     border-left: 8px solid #e5e5e5;
 }
@@ -177,10 +177,13 @@ h1 + .light:empty {display: none;}
 
 .post h1, .post h2, .post h3 {
     color: #111;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
 }
 
+.post h1:first-of-type {
+    font-size: 28px;
+}
 
 .post img {
     max-width: 100%;
