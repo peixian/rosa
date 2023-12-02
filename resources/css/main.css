@@ -48,10 +48,9 @@ pre {
     border-radius: 3px 3px 3px 3px;
     font-size: 12px;
     background-color: #f5f5f5;
-    white-space: pre;
-    white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
+    overflow-x: auto;
 }
 blockquote {
     padding: 0 0 0 20px;
@@ -202,8 +201,6 @@ h1 + .light:empty {display: none;}
     counter-increment: o-list;
 }
 
-
-
 .post a {
     color: #3873AD;
 }
@@ -330,13 +327,13 @@ h1 + .light:empty {display: none;}
         color: #ddd;
     }
     .post a {
-        color: #59a;
+        color: #d67a69;
     }
     .index a {
         color: #ddd;
     }
     .post-meta a {
-        color: #59a;
+        color: #d67a69;
     }
     code {
         color: #ffa07a;
