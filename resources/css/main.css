@@ -155,15 +155,16 @@ h1 + .light:empty {display: none;}
     float: right;
     height: 14px;
     width: 14px;
-    background: url('https://webring.xxiivv.com/icon.black.svg') no-repeat center center;
+    background: url('data:image/svg+xml;base64,CjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIzMDAiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLXdpZHRoPSIyOCIgd2lkdGg9IjMwMCIgdmlld0JveD0iMjUgMjUgMjUwIDI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yMDEuOTYyIDIxMGE2MCA2MCAwIDEwLTEwMy45MjQtNjBsLTUwIDg2LjYwMyIvPgogICAgPHBhdGggZD0iTTk4LjAzOCAyMTBhNjAgNjAgMCAxMDEwMy45MjQtNjBsLTUwLTg2LjYwMyIvPgogICAgPHBhdGggZD0iTTE1MCAxMjBhNjAgNjAgMCAxMDAgMTIwaDEwMCIvPgo8L3N2Zz4K') no-repeat center center;
     background-size: contain;
 }
 
 @media (prefers-color-scheme: dark) {
     #webring_icon {
-        background-image: url('https://webring.xxiivv.com/icon.white.svg');
+        filter: invert(100%);
     }
 }
+
 
 
 /* post */
