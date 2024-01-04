@@ -6,7 +6,55 @@
           <span title="tags" class="light">Filed Under: {{{tag-links}}}</span>
       </div>
       {{/show-meta}}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/katex.min.css" crossorigin="anonymous" onload="this.media='all'">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/katex.min.js" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+
+
+      <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           var delimiters = [
+               {left: "$$", right: "$$", display: true},
+               {left: "\\[", right: "\\]", display: true},
+               {left: "$", right: "$", display: false},
+               {left: "\\(", right: "\\)", display: false}
+           ];
+
+           var posts = document.querySelectorAll('.post');
+           var shouldLoadKaTeX = Array.from(posts).some(post => {
+
+               return delimiters.some(function(delimiter) {
+                   return post.textContent.includes(delimiter.left) &&
+                          post.textContent.includes(delimiter.right);
+               });
+           });
+
+           if (shouldLoadKaTeX) {
+               loadCSS("https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/katex.min.css", function() {
+                   loadScript("https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/katex.min.js", function() {
+                       loadScript("https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/contrib/auto-render.min.js", function() {
+                           Array.from(posts).forEach(post => {
+                               renderMathInElement(post, { delimiters: delimiters });
+                           });
+                       });
+                   });
+               });
+           }
+       });
+
+       function loadScript(url, callback) {
+           var script = document.createElement('script');
+           script.src = url;
+           script.crossOrigin = 'anonymous';
+           script.onload = callback;
+           document.head.appendChild(script);
+       }
+
+       function loadCSS(url, callback) {
+           var link = document.createElement('link');
+           link.rel = 'stylesheet';
+           link.href = url;
+           link.crossOrigin = 'anonymous';
+           link.onload = callback;
+           link.media = 'all';
+           document.head.appendChild(link);
+       }
+      </script>
     </div>
